@@ -1,0 +1,195 @@
+@import url('https://fonts.googleapis.com/css2?family=Lobster&family=PT+Serif&display=swap');
+*{
+  margin: 0;
+  padding: 0;
+}
+
+#mapa{
+  width: 900px;
+  height: 600px;
+}
+
+svg{
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+}
+
+.part{
+  position: absolute;
+  fill: #FF1493;
+  opacity: 0;
+}
+
+.part:hover{
+  opacity: .7;
+  cursor: pointer;
+}
+
+#flagPlace{
+  width: 100%;
+  height:100%;
+  position: relative;
+  text-align: center;
+  }
+
+.down-buttons{
+  display: none;
+  position: fixed;
+  top: 80%;
+  width: 100%;
+  height: 60px;
+  justify-content: space-between;
+}
+.down-button{
+  text-transform: uppercase;
+  margin: 0 20px;
+  height: 50px;
+  width: 150px;
+  border: 5px #FFA500 solid;
+  background-color: #FFD700;
+  font-weight: bold;
+  font-family: 'PT Serif', serif;
+  }
+.top-descript{
+  display: none;
+  position: fixed;
+  height: 200px;
+  font-size: 26px;
+  width: auto;
+  color: #FFD700;
+  top: .7%;
+  margin: 20px 5px;
+  font-family: 'Lobster', cursive;
+  text-shadow: 0 0 8px black;
+}
+#smallIcon{
+  display: none;
+  position: absolute;
+  height: 10px;
+  width: 250px;
+  z-index: 100;
+  bottom: 0;
+  overflow: hidden;
+  left: 0;
+  color: white;
+  padding-left: 10px;
+  padding-top: 10px;
+  transition: 1s;
+  }
+#ramka{
+  height: 100%;
+  width: inherit;
+  position: absolute;
+  z-index: 101;
+  top: 0;
+  left: 0;
+  }
+#kicon{
+  position: relative;
+  height: 90px;
+  width: 220px;
+  z-index: 1;
+  margin-bottom: 0;
+  margin-top: 2px
+}
+#textDiv{
+  background-color:black;
+  width:210px;
+  height: 112px;
+  margin: 0 10px;
+}
+
+#handAr{
+  position: absolute;
+  z-index: 99;
+  width: 30px;
+  height: 10px;
+  float: left;
+  animation: pointing ease 1s infinite
+}
+
+@keyframes pointing {
+  0{
+    margin-left: 0
+  }
+  50%{
+    margin-left: 15px
+  }
+  100%{
+    margin-left: 0
+  }
+}
+
+#close-icon{
+  display: block;
+  text-align: center;
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  z-index: 200;
+  font-weight: bold;
+  background-color: grey;
+  cursor: pointer;
+}
+
+.close-icon:hover{
+  cursor: pointer;
+}
+
+#textInfo{
+  margin: 0 45px;
+  position: absolute;
+  z-index: 102;
+  color: white;
+  width: 155px;
+  font-size: 12px;
+  text-decoration: none;
+}
+.conte{
+  background-color: black;
+  width: 220px;
+  height: 190px;
+  border-radius: 15px;
+}
+
+.modal{
+    display: block;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.7)
+}
+
+.modal-content{
+  width: 200px;
+  height: 100px;
+  background-color: white;
+  margin-left: 50%;
+  margin-top: 20%;
+  opacity: 1;
+  transform:translate(-50%, -20%);
+  align-items: center;
+  padding-top: 20px;
+  padding-left: 20px
+}
+
+.modal-content span{
+  display: block;
+  font: 20px;
+  font-weight: bold;
+}
+
+.modal-content button{
+  margin: 10px 50px;
+  width: 60px;
+  height: 25px;
+  background-color: green;
+  color: white
+}
